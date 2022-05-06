@@ -15,7 +15,7 @@ namespace CSVReader
         }
         static List<Enrollee> ReadCSVFile()
         {
-            string path =  @"H:\Learning\Employment\Avility\Lisp question\CSVReader\Input\Enrollee.csv";
+            string path =  @"C:\CSVDemo\Lisp question\CSVReader\Input\Enrollee.csv";
             var enrollees = new List<Enrollee>();
             var file = File.ReadAllLines(path);
             for(int i=1; i < file.Length; i++)
@@ -48,7 +48,7 @@ namespace CSVReader
             
             foreach(var company in companies)
             {
-                string path = @"H:\Learning\Employment\Avility\Lisp question\CSVReader\Output\" + company.Name + ".csv";
+                string path = @"C:\CSVDemo\Lisp question\CSVReader\Output\" + company.Name + ".csv";
                 
                 foreach(var user in company.insuranceCompanies)
                 {
