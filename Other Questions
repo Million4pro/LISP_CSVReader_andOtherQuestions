@@ -1,0 +1,32 @@
+1) One of my biggest achievements was during my time at Nethealth our team was assigned to a very critical project, 
+the main goal of the project was to make our application meet standards and be certified by a government agency. 
+For this reason, the application must incorporate some required changes. 
+We worked as a team in a collaborative way day and off office hours and were able to finish the project before the deadline. 
+And later we managed to get the required certification.
+
+2) Recently I was researching about azure DevOps portal in order to improve my knowledge of different services that Azure can provide Including Azure Service bus, 
+App Services, and Azure Cosmos DB. As a developer, I strongly recommend researching services and technologies that Azure and 
+other cloud computing services can provide and we should always try to think about how we can improve our process and product using these services.
+
+3) Hi Grand Ma, today I am gonna tell you about Availity. 
+Availity is an IT company in the Healthcare industry and its products are used by millions of 
+providers to securely access patient information such as eligibility, benefits, claim status, authorizations and other information.   
+
+7) 
+-- A
+select * from Customer
+where lastName like 's%'
+order by FirstName desc, LastName desc
+
+-- B
+select c.CustID, COALESCE(sum(ol.cost), 0) as TotalCost from Customer c left join [Order] o
+on c.CustID = o.CustomerID left join OrderLine ol on ol.OrderID = o.OrderID
+where o.OrderDate >= DATEADD(month, datediff(month, 0, dateadd(m, -6, current_timestamp)), 0)
+group by c.CustID
+
+-- C
+select c.CustID, COALESCE(sum(ol.cost), 0) as TotalCost from Customer c left join [Order] o
+on c.CustID = o.CustomerID left join OrderLine ol on ol.OrderID = o.OrderID
+where o.OrderDate >= DATEADD(month, datediff(month, 0, dateadd(m, -6, current_timestamp)), 0)
+group by c.CustID
+having sum(ol.cost) >= 100 and sum(ol.cost) <= 500
